@@ -1,6 +1,23 @@
 //Welcome button
 let welcome = document.getElementById("welcome");
 
+function expand() {
+    let e = setInterval(exp, 5);
+    let posx = 0;
+
+    function exp() {
+        if(posx >= 100){
+            welcome.style.width = "100%";
+            welcome.style.paddingLeft = '';
+            welcome.style.paddingRight = '';
+            clearInterval(e);
+        } else {
+            posx += 0.5;
+            welcome.style.width = posx+'%'
+        }
+    }
+};
+
 welcome.onclick = function(){
     let t = setInterval(move, 5);
     let pos = 350;
@@ -8,6 +25,7 @@ welcome.onclick = function(){
     function move(){
         if(pos >= 650) {
             clearInterval(t);
+            expand();
         } else if (pos >= 550){
             pos += 1;
             welcome.style.bottom = pos+"px";
@@ -18,7 +36,7 @@ welcome.onclick = function(){
             pos += 3;
             welcome.style.bottom = pos+"px";
         } else {
-            pos += 10;
+            pos += 5;
             welcome.style.bottom = pos+"px";
         };
     };
