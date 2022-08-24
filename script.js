@@ -3,7 +3,7 @@ let welcome = document.getElementById("welcome");
 
 function expand() {
     let e = setInterval(exp, 5);
-    let posx = 0;
+    let posx = 10;
 
     function exp() {
         if(posx >= 100){
