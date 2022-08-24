@@ -8,8 +8,6 @@ function expand() {
     function exp() {
         if(posx >= 100){
             welcome.style.width = "100%";
-            welcome.style.paddingLeft = '';
-            welcome.style.paddingRight = '';
             clearInterval(e);
         } else {
             posx += 0.5;
@@ -20,24 +18,24 @@ function expand() {
 
 welcome.onclick = function(){
     let t = setInterval(move, 5);
-    let pos = 350;
+    let pos = 50;
 
     function move(){
-        if(pos >= 650) {
+        if(pos >= 90) {
             clearInterval(t);
             expand();
-        } else if (pos >= 550){
-            pos += 1;
-            welcome.style.bottom = pos+"px";
-        } else if (pos < 550 && pos >= 500){
-            pos += 2;
-            welcome.style.bottom = pos+"px";
-        } else if (pos < 500 && pos >=450) {
-            pos += 3;
-            welcome.style.bottom = pos+"px";
+        } else if (pos >= 80){
+            pos += 0.05;
+            welcome.style.bottom = pos+"%";
+        } else if (pos < 80 && pos >= 75){
+            pos += 0.2;
+            welcome.style.bottom = pos+"%";
+        } else if (pos < 75 && pos >=70) {
+            pos += 0.3;
+            welcome.style.bottom = pos+"%";
         } else {
-            pos += 5;
-            welcome.style.bottom = pos+"px";
+            pos += 0.5;
+            welcome.style.bottom = pos+"%";
         };
     };
 };
