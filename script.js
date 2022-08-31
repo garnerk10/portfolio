@@ -19,10 +19,11 @@ function fadeWelcome() {
 
     function fadeIn(){
         welc_text.innerHTML = "Kyle Garner's Portfolio";
-        let fin = setInterval(fadeI, 10);
+        welcome.style.cursor = 'default';
+        let fi = setInterval(fadeI, 10);
         function fadeI(){
         if(opa >= 1){
-            clearInterval(fin);
+            clearInterval(fi);
         } else {
             opa += 0.01;
             welc_text.style.opacity = opa;
@@ -49,7 +50,7 @@ function expand() {
 };
 
 //Move welcome button to top of page
-welcome.onclick = function(){
+const welcFunc = () => {
     let t = setInterval(move, 5);
     let pos = 50;
 
@@ -71,6 +72,7 @@ welcome.onclick = function(){
             welcome.style.bottom = pos+"%";
         };
     };
+    welcome.removeEventListener("click", welcFunc);
 };
 
-
+welcome.addEventListener("click", welcFunc);
