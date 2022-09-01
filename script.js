@@ -121,3 +121,15 @@ rightArrow.addEventListener("mouseover", rightRed);
 rightArrow.addEventListener("mouseleave", rightClear);
 rightArrow.addEventListener("mousedown", rightBlue);
 rightArrow.addEventListener("mouseup", rightRed);
+
+//Array containing projects
+
+let projArray = [projClub];
+
+const projClub = {
+    title: "Board Game Club",
+    image: "resources/game_club_img.png",
+    description:  "Project from Codecademy to create a website for a club utilizing HTML and CSS.",
+    link: "https://garnerk10.github.io/board-game-club/board-game-club/"
+};
+
