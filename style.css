@@ -16,3 +16,10 @@ body {
 #welcome:hover {
     cursor: pointer;
 }
+
+#mainDisplay {
+    position: relative;
+    display: none;
+    opacity: 0;
+    bottom: 10rem;
+}

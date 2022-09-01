@@ -1,6 +1,7 @@
 //Welcome button
 let welcome = document.getElementById("welcome");
-let welc_text = document.getElementById("welc_text")
+let welc_text = document.getElementById("welc_text");
+let mainDisplay = document.getElementById("mainDisplay");
 
 //Fade welcome button
 function fadeWelcome() {
@@ -27,6 +28,7 @@ function fadeWelcome() {
         } else {
             opa += 0.01;
             welc_text.style.opacity = opa;
+            mainDisplay.style.opacity = opa;
         };
         };
     };
@@ -42,6 +44,7 @@ function expand() {
             welcome.style.width = "100%";
             clearInterval(e);
             fadeWelcome();
+            mainDisplay.style.display = "flex";
         } else {
             posx += 0.5;
             welcome.style.width = posx+'%'
