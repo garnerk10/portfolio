@@ -21,5 +21,27 @@ body {
     position: relative;
     display: none;
     opacity: 0;
-    bottom: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projImg {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+#screenshot {
+    max-width: 100%;
+}
+
+#left_arrow, #right_arrow {
+    width: 10%;
+    object-fit: contain;
+}
+
+.projDescription {
+    width: 40%;
+    text-align: center;
 }
