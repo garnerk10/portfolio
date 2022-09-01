@@ -28,12 +28,13 @@ body {
 
 .projImg {
     display: flex;
-    width: 50%;
-    justify-content: center;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #screenshot {
-    max-width: 100%;
+    max-width: 70%;
 }
 
 #left_arrow, #right_arrow {

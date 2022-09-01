@@ -58,8 +58,10 @@ const welcFunc = () => {
     let pos = 50;
 
     function move(){
-        if(pos >= 90) {
+        if(pos >= 89) {
             clearInterval(t);
+            welcome.style.bottom="auto";
+            welcome.style.top=0;
             expand();
         } else if (pos >= 80){
             pos += 0.05;
@@ -79,3 +81,43 @@ const welcFunc = () => {
 };
 
 welcome.addEventListener("click", welcFunc);
+
+//left arrow button
+let leftArrow = document.getElementById("left_arrow");
+
+const leftRed = () => {
+    leftArrow.src ="resources/left_red.png"
+};
+
+const leftClear = () => {
+    leftArrow.src = "resources/left.png";
+};
+
+const leftBlue = () => {
+    leftArrow.src = "resources/left_blue.png"
+}
+
+leftArrow.addEventListener("mouseover", leftRed);
+leftArrow.addEventListener("mouseleave", leftClear);
+leftArrow.addEventListener("mousedown", leftBlue);
+leftArrow.addEventListener("mouseup", leftRed);
+
+//right arrow button
+let rightArrow = document.getElementById("right_arrow");
+
+const rightRed = () => {
+    rightArrow.src ="resources/right_red.png"
+};
+
+const rightClear = () => {
+    rightArrow.src = "resources/right.png";
+};
+
+const rightBlue = () => {
+    rightArrow.src = "resources/right_blue.png"
+}
+
+rightArrow.addEventListener("mouseover", rightRed);
+rightArrow.addEventListener("mouseleave", rightClear);
+rightArrow.addEventListener("mousedown", rightBlue);
+rightArrow.addEventListener("mouseup", rightRed);
