@@ -146,8 +146,8 @@ let projImg = document.getElementById("screenshot");
 let projDesc = document.getElementById("projDescription");
 let projLink = document.getElementById("imgLink");
 
-//scroll left and right functions
 
+//scroll left and right functions
 let count = 0;
 
 const scrollRight = () => {
@@ -167,3 +167,21 @@ const scrollRight = () => {
 };
 
 rightArrow.addEventListener("click", scrollRight);
+
+const scrollLeft = () => {
+    if (count === 0){
+        count = projArray.length - 1;
+        projName.innerHTML = projArray[count].title;
+        projImg.src = projArray[count].image
+        projDesc.innerHTML = projArray[count].description;
+        projLink.href = projArray[count].link;
+    } else {
+        count -= 1;
+        projName.innerHTML = projArray[count].title;
+        projImg.src = projArray[count].image
+        projDesc.innerHTML = projArray[count].description;
+        projLink.href = projArray[count].link
+    };
+};
+
+leftArrow.addEventListener("click", scrollLeft);
