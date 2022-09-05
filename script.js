@@ -139,3 +139,30 @@ const projBrewing = {
     description: "Project from Codecademy creating a website to showcase adaptive web page design",
     link: "https://garnerk10.github.io/K12Brewing/",
 };
+
+//Get variables from index
+let projName = document.getElementById("projName");
+let projImg = document.getElementById("screenshot");
+let projDesc = document.getElementById("projDescription");
+
+//scroll left and right functions
+
+let count = 0;
+
+const scrollRight = () => {
+    if (count === projArray.length - 1){
+        count = 0;
+        projName.innerHTML = projArray[0].title;
+        projImg.src = projArray[0].image
+        projDesc.innerHTML = projArray[0].description;
+        projImg.href = projArray[0].link;
+    } else {
+        count++;
+        projName.innerHTML = projArray[count].title;
+        projImg.src = projArray[count].image
+        projDesc.innerHTML = projArray[count].description;
+        projImg.href = projArray[count].link;
+    };
+};
+
+rightArrow.addEventListener("click", scrollRight);
