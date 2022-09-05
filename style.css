@@ -34,6 +34,10 @@ body {
 }
 
 #screenshot {
+    max-width: 100%;
+}
+
+.projImg a {
     max-width: 70%;
 }
 

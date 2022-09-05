@@ -144,6 +144,7 @@ let projArray = [projClub, projBrewing];
 let projName = document.getElementById("projName");
 let projImg = document.getElementById("screenshot");
 let projDesc = document.getElementById("projDescription");
+let projLink = document.getElementById("imgLink");
 
 //scroll left and right functions
 
@@ -155,13 +156,13 @@ const scrollRight = () => {
         projName.innerHTML = projArray[0].title;
         projImg.src = projArray[0].image
         projDesc.innerHTML = projArray[0].description;
-        projImg.href = projArray[0].link;
+        projLink.href = projArray[0].link;
     } else {
         count += 1;
         projName.innerHTML = projArray[count].title;
         projImg.src = projArray[count].image
         projDesc.innerHTML = projArray[count].description;
-        projImg.href = projArray[count].link;
+        projLink.href = projArray[count].link;
     };
 };
 
