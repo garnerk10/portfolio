@@ -133,3 +133,6 @@ const projClub = {
     link: "https://garnerk10.github.io/board-game-club/board-game-club/"
 };
 
+const projBrewing = {
+    title: "K12 Brewing Company",
+};
