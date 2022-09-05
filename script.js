@@ -124,7 +124,7 @@ rightArrow.addEventListener("mouseup", rightRed);
 
 //Array containing projects
 
-let projArray = [projClub];
+let projArray = [projClub, projBrewing];
 
 const projClub = {
     title: "Board Game Club",
@@ -135,4 +135,7 @@ const projClub = {
 
 const projBrewing = {
     title: "K12 Brewing Company",
+    image: "resources/k12_img.png",
+    description: "Project from Codecademy creating a website to showcase adaptive web page design",
+    link: "https://garnerk10.github.io/K12Brewing/",
 };
