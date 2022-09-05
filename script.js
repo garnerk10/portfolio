@@ -124,21 +124,21 @@ rightArrow.addEventListener("mouseup", rightRed);
 
 //Array containing projects
 
-let projArray = [projClub, projBrewing];
-
-const projClub = {
+let projClub = {
     title: "Board Game Club",
     image: "resources/game_club_img.png",
     description:  "Project from Codecademy to create a website for a club utilizing HTML and CSS.",
     link: "https://garnerk10.github.io/board-game-club/board-game-club/"
 };
 
-const projBrewing = {
+let projBrewing = {
     title: "K12 Brewing Company",
     image: "resources/k12_img.png",
     description: "Project from Codecademy creating a website to showcase adaptive web page design",
     link: "https://garnerk10.github.io/K12Brewing/",
 };
+
+let projArray = [projClub, projBrewing];
 
 //Get variables from index
 let projName = document.getElementById("projName");
@@ -157,7 +157,7 @@ const scrollRight = () => {
         projDesc.innerHTML = projArray[0].description;
         projImg.href = projArray[0].link;
     } else {
-        count++;
+        count += 1;
         projName.innerHTML = projArray[count].title;
         projImg.src = projArray[count].image
         projDesc.innerHTML = projArray[count].description;

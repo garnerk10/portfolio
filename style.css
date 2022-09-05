@@ -42,7 +42,7 @@ body {
     object-fit: contain;
 }
 
-.projDescription {
+#projDescription {
     width: 40%;
     text-align: center;
 }
